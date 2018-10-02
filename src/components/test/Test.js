@@ -5,6 +5,9 @@ class Test extends Component {
     title: '',
     body: ''
   };
+  ////////////////////////////////////////////
+  ///////// LIFECYCLE METHODS ////////////////
+  ////////////////////////////////////////////
 
   componentDidMount() {
     fetch('https://jsonplaceholder.typicode.com/posts/1')
@@ -16,6 +19,26 @@ class Test extends Component {
         })
       );
   }
+
+  // componentWillMount() {
+  //   console.log('componentWillMount');
+  // }
+
+  // // when something updates or component updates such as state
+  // componentDidUpdate() {
+  //   console.log('componentDidUpdate');
+  // }
+
+  // componentWillUpdate() {
+  //   console.log('componentWillUpdate');
+  // }
+
+  // // when your component receives new properties this will run
+  // // going away with react 17
+  // // turning into static getDerivedStateFromProps(nextProps, previousState)
+  // componentWillReceiveProps(nextProps, nextState) {
+  //   console.log('componentWillReceiveProps');
+  // }
 
   render() {
     const { title, body } = this.state;
